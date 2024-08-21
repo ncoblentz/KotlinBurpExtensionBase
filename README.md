@@ -27,6 +27,10 @@ Be sure to configure the following settings in Intellij by choosing `File -> Set
 1. In `build.gradle.kts`, change `group = "com.yourname.montoya"` to reflect your name or company
 2. In `settings.gradle.kts` change `rootProject.name = "KotlinBurpExtensionBase"` to the name of your extension/project
 
+#### Intellij Settings
+
+1. Open `File -> Project Structure -> Project` and change the `Name` field to the name of your new project.
+
 ### How to Build a Project
 
 When you want to produce a Burp suite extension, you will need to build a jar that includes any external libraries and related Kotlin libraries. Build a plugin at the command line with:
