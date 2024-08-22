@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.0.0"
+    kotlin("jvm") version "2.0.20"
 
     // Provides the shadowJar task in Gradle
     // https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow
