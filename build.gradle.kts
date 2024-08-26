@@ -17,6 +17,17 @@ repositories {
     mavenLocal()
 
     mavenCentral()
+
+    // Enable these if you want to use https://github.com/ncoblentz/BurpMontoyaLibrary
+    // Add two specific GitHub repositories in which maven packages can be found through jitpack.io
+    /*
+    maven(url="https://jitpack.io") {
+        content {
+            includeGroup("com.github.milchreis")
+            includeGroup("com.github.ncoblentz")
+        }
+    }
+    */
 }
 
 dependencies {
@@ -26,6 +37,11 @@ dependencies {
     // https://central.sonatype.com/artifact/net.portswigger.burp.extensions/montoya-api
     // Check for latest version: https://central.sonatype.com/artifact/net.portswigger.burp.extensions/montoya-api/versions
     implementation("net.portswigger.burp.extensions:montoya-api:2024.7")
+
+    // Enable these if you want to use https://github.com/ncoblentz/BurpMontoyaLibrary
+    //implementation("com.github.ncoblentz:BurpMontoyaLibrary:0.1.22")
+    //https://github.com/Milchreis/UiBooster/releases (a dependency of BurpMontoyaLibrary)
+    //implementation("com.github.milchreis:uibooster:1.21.1")
 }
 
 tasks.test {
