@@ -31,6 +31,14 @@ Be sure to configure the following settings in Intellij by choosing `File -> Set
 
 1. Open `File -> Project Structure -> Project` and change the `Name` field to the name of your new project.
 
+#### Initializing and Reloading Gradle
+
+When first starting up a project, IntelliJ will set up Gradle, download dependencies, and try an initial build. You can see the status of this process in the "Build" tab, as shown in the screenshot. If you do not see that tab, go to View -> Tool Window -> Build.
+![InitialBuildOnStartup.png](Documentation/IntellijSetup/InitialBuildOnStartup.png)
+
+Whenever you change the `build.gradle.kts` or `settings.gradle.kts` file, you may have to tell IntelliJ to reload Gradle dependencies, by using the buttons shown below. This screenshot also shows the location of the "shadowJar" build task.
+![ReloadGradle.png](Documentation/IntellijSetup/ReloadGradle.png)
+
 ### How to Build a Project
 
 #### From Command Line
