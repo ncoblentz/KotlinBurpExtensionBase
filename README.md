@@ -87,3 +87,24 @@ Another method is to use the Intellij Debugger. To set it up, we first need to t
 3. In IntelliJ Open the Menu and choose `Run -> Attach to Process`. Choose the Burp Suite process listening on port 8700
 4. Set a breakpoint in the "YourBurpKotlinExtensionName" class by clicking the line number next to the hello world statement
 5. Load (or reload with ctrl + click) your extension and watch it stop at the breakpoint inside of IntelliJ
+
+## Examples Using This Template That Can Be Used As Templates Themselves
+
+The following projects used this repository as a template and demonstrate the following Burp or Java features:
+- https://github.com/ncoblentz/BurpKotlinSignalRAndWebSocketDemo
+  - HTTP Message Editor
+  - Proxy Request Listener, Adds Notes To HTTP Proxy History Requests
+- https://github.com/ncoblentz/KotlinBurpJwtTokenHandlerDemo
+  - Session Handling Action
+  - Right-Click Context Menu
+  - Persistent Project Settings and UI to Manage Settings
+- https://github.com/ncoblentz/MakeHttpRequestDemo
+  - Java 21 Virtual Threads
+  - Make new HTTP Requests
+  - Right-Click Context Menu
+  - Persistent Project Settings and UI to Manage Settings
+- https://github.com/ncoblentz/KotlinBurpCollabHelper
+  - Use collaborator payloads and monitor for interactions
+  - Right-Click Context Menu
+  - Persistent Project Settings and UI to Manage Settings
+  - Create audit issue
