@@ -9,6 +9,7 @@ plugins {
 
 }
 
+//Change this to reflect your package namespace
 group = "com.yournamehere.montoya"
 version = "0.1.0"
 
