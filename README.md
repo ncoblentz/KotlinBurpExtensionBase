@@ -3,8 +3,11 @@
 This project provides the starting point for building a Burp Extension in Kotlin using the Montoya API. Replace this paragraph with a description of your plugin.
 
 ## Setup Steps
+### Install IntelliJ
 
-### Intellij
+Download the JetBrains Toolbox App and install IntelliJ Community (there's also a pro) through it: https://www.jetbrains.com/toolbox-app/
+
+### Configure Intellij
 
 Be sure to configure the following settings in Intellij by choosing `File -> Settings`
 
