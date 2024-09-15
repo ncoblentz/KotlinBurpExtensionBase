@@ -23,12 +23,10 @@ class YourBurpKotlinExtensionName : BurpExtension {
 
         // In Kotlin, you have to explicitly define variables as nullable with a ? as in MontoyaApi? above
         // This is necessary because the Java Library allows null to be passed into this function
-        // requireNotNull is a built-in Kotlin function to check for null and throw an Illegal Argument exception if it is null
-        // after checking for null, the Kotlin compiler knows that any reference to api below will not = null and you no longer have to check it
-        requireNotNull(api) { "api : MontoyaApi is not allowed to be null" }
-
-        // Assign the MontoyaApi instance (not nullable) to a class instance variable to be accessible from other functions in this class
-        this.api = api
+        // requireNotNull is a built-in Kotlin function to check for null that throws an Illegal Argument exception if it is null
+        // after checking for null, the Kotlin compiler knows that any reference to api  or this.api below will not = null and you no longer have to check it
+        // Finally, assign the MontoyaApi instance (not nullable) to a class property to be accessible from other functions in this class
+        this.api = requireNotNull(api) { "api : MontoyaApi is not allowed to be null" }
 
         // This will print to Burp Suite's Extension output and can be used to debug whether the extension loaded properly
         api.logging().logToOutput("Started loading the extension...")
