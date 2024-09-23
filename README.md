@@ -63,13 +63,19 @@ A `projectname-x.y.z.all.jar` file will be produced in `build/libs/` where `x.y.
 4. For "Extension Type", choose "Java"
 5. Click the "Select File" button, and choose the `projectname-x.y.all.jar` from above
 
-## Building An Extension
+## Resources For Learning Kotlin and Building Burp Extensions
 
 ### Documentation
 
-- The Montoya API Documentation is located at: https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/MontoyaApi.html
-- Example Burp Extensions written in Java using the Montoya API are located at: https://github.com/PortSwigger/burp-extensions-montoya-api-examples
+#### Kotlin
+- Kotlin: An Illustrated Guide: https://typealias.com/start/
+- Kotlin Documentation: https://kotlinlang.org/docs/basic-syntax.html
+- Kotlin Cheat Sheet: https://github.com/alidehkhodaei/kotlin-cheat-sheet
 
+#### Montoya API Based Extensions
+- Montoya API Documentation: https://portswigger.github.io/burp-extensions-montoya-api/javadoc/
+- Java (Not in Kotlin unfortunately) Burp Extension Examples: https://github.com/PortSwigger/burp-extensions-montoya-api-examples
+- Kotlin Burp Extension Template: https://github.com/ncoblentz/KotlinBurpExtensionBase
 
 ## Debugging An Extension
 
