@@ -114,3 +114,8 @@ The following projects used this repository as a template and demonstrate the fo
   - Right-Click Context Menu
   - Persistent Project Settings and UI to Manage Settings
   - Create audit issue
+
+## Re-Usable Library for Creating Persistent Project Setttings and Generating a User Interface to Manage them
+
+Plus a lot of other time-saving helper functions
+- https://github.com/ncoblentz/BurpMontoyaLibrary
