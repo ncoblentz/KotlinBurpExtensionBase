@@ -67,6 +67,8 @@ class YourBurpKotlinExtensionName : BurpExtension {
 
         // Code for setting up your extension starts here...
 
+
+
         // Just a simple hello world to start with
         api.logging().logToOutput("Hello Extension Writer!")
 

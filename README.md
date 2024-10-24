@@ -21,6 +21,8 @@ Be sure to configure the following settings in Intellij by choosing `File -> Set
 
 ### Configure Kotlin to use 2.x
 
+__Current: 2.0.21__
+
 ![Kotlin2.png](Documentation/IntellijSetup/Kotlin2.png)
 
 ### Project
