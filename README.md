@@ -1,5 +1,10 @@
 # Your Kotlin Burp Extension Name Here!
 
+_By [Nick Coblentz](https://www.linkedin.com/in/ncoblentz/)_
+
+__This Burp Extension Template is made possible by [Virtue Security](https://www.virtuesecurity.com), the Application Penetration Testing consulting company I work for.__
+
+
 This project provides the starting point for building a Burp Extension in Kotlin using the Montoya API. Replace this paragraph with a description of your plugin.
 
 ## Setup Steps
