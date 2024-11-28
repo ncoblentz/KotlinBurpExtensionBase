@@ -26,8 +26,6 @@ Be sure to configure the following settings in Intellij by choosing `File -> Set
 
 ### Configure Kotlin to use 2.x
 
-__Current: 2.0.21__
-
 ![Kotlin2.png](Documentation/IntellijSetup/Kotlin2.png)
 
 ### Project
@@ -121,6 +119,8 @@ The following projects used this repository as a template and demonstrate the fo
   - Right-Click Context Menu
   - Persistent Project Settings and UI to Manage Settings
   - Create audit issue
+- https://github.com/ncoblentz/BurpKotlinWSocketJSONArrayEditor
+  - Adds a WebSocket Message Editor Tab
 
 ## Re-Usable Library for Creating Persistent Project Setttings and Generating a User Interface to Manage them
 
