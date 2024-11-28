@@ -1,7 +1,7 @@
 plugins {
     // Provides Kotlin Language Support
     // https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm
-    kotlin("jvm") version "2.0.21"
+    kotlin("jvm") version "2.1.0"
 
     // Provides the shadowJar task in Gradle
     // https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow
