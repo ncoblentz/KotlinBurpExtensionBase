@@ -37,7 +37,7 @@ dependencies {
     // Include the Montoya API from Maven Central:
     // https://central.sonatype.com/artifact/net.portswigger.burp.extensions/montoya-api
     // Check for latest version: https://central.sonatype.com/artifact/net.portswigger.burp.extensions/montoya-api/versions
-    implementation("net.portswigger.burp.extensions:montoya-api:2024.12")
+    implementation("net.portswigger.burp.extensions:montoya-api:2025.2")
 
     // Enable these if you want to use https://github.com/ncoblentz/BurpMontoyaLibrary
     //implementation("com.github.ncoblentz:BurpMontoyaLibrary:0.1.27")
