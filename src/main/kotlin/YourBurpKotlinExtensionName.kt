@@ -1,21 +1,23 @@
 import burp.api.montoya.BurpExtension
 import burp.api.montoya.MontoyaApi
-/* Uncomment this section if you wish to use persistent settings and automatic UI Generation from: https://github.com/ncoblentz/BurpMontoyaLibrary
-import com.nickcoblentz.montoya.settings.*
-import de.milchreis.uibooster.model.Form
-import de.milchreis.uibooster.model.FormBuilder
-*/
+import burp.api.montoya.ui.settings.SettingsPanelBuilder
+import burp.api.montoya.ui.settings.SettingsPanelPersistence
+import com.nickcoblentz.montoya.CollabHelper
+import com.nickcoblentz.montoya.CollabHelperPanelSettings
+import com.nickcoblentz.montoya.settings.PanelSettingsDelegate
+
 
 // Montoya API Documentation: https://portswigger.github.io/burp-extensions-montoya-api/javadoc/burp/api/montoya/MontoyaApi.html
 // Montoya Extension Examples: https://github.com/PortSwigger/burp-extensions-montoya-api-examples
 
 class YourBurpKotlinExtensionName : BurpExtension {
     private lateinit var api: MontoyaApi
+    private val projectSettings : MyProjectSettings by lazy { MyProjectSettings() }
 
+    companion object {
+        const val EXTENSION_NAME = "Your Burp Kotlin Extension Name"
+    }
 
-    // Uncomment this section if you wish to use persistent settings and automatic UI Generation from: https://github.com/ncoblentz/BurpMontoyaLibrary
-    // Add one or more persistent settings here
-    // private lateinit var exampleNameSetting : StringExtensionSetting
 
 
 
@@ -30,39 +32,9 @@ class YourBurpKotlinExtensionName : BurpExtension {
         // This will print to Burp Suite's Extension output and can be used to debug whether the extension loaded properly
         api.logging().logToOutput("Started loading the extension...")
 
-        /* Uncomment this section if you wish to use persistent settings and automatic UI Generation from: https://github.com/ncoblentz/BurpMontoyaLibrary
-
-        exampleNameSetting = StringExtensionSetting(
-            // pass the montoya API to the setting
-            api,
-            // Give the setting a name which will show up in the Swing UI Form
-            "My Example Setting Name Here",
-            // Key for where to save this setting in Burp's persistence store
-            "MyPluginName.ExampleSettingNameHere",
-            // Default value within the Swing UI Form
-            "default value here",
-            // Whether to save it for this specific "PROJECT" or as a global Burp "PREFERENCE"
-            ExtensionSettingSaveLocation.PROJECT
-            )
-
-
-        // Create a list of all the settings defined above
-        // Don't forget to add more settings here if you define them above
-        val extensionSetting = listOf(exampleNameSetting)
-
-        val gen = GenericExtensionSettingsFormGenerator(extensionSetting, "Jwt Token Handler")
-        val settingsFormBuilder: FormBuilder = gen.getSettingsFormBuilder()
-        val settingsForm: Form = settingsFormBuilder.run()
-
-        // Tell Burp we want a right mouse click context menu for accessing the settings
-        api.userInterface().registerContextMenuItemsProvider(ExtensionSettingsContextMenuProvider(api, settingsForm))
-
-        // When we unload this extension, include a callback that closes any Swing UI forms instead of just leaving them still open
-        api.extension().registerUnloadingHandler(ExtensionSettingsUnloadHandler(settingsForm))
-        */
 
         // Name our extension when it is displayed inside of Burp Suite
-        api.extension().setName("Your Plugin Name Here")
+        api.extension().setName(EXTENSION_NAME)
 
         // Code for setting up your extension starts here...
 
@@ -77,4 +49,20 @@ class YourBurpKotlinExtensionName : BurpExtension {
         api.logging().logToOutput("...Finished loading the extension")
 
     }
+}
+
+
+class MyProjectSettings() {
+    val settingsPanelBuilder : SettingsPanelBuilder = SettingsPanelBuilder.settingsPanel()
+        .withPersistence(SettingsPanelPersistence.PROJECT_SETTINGS) // you can change this to user settings if you wish
+        .withTitle(YourBurpKotlinExtensionName.EXTENSION_NAME)
+        .withDescription("Add your description here")
+        .withKeywords("Add Keywords","Here")
+
+    private val settingsManager = PanelSettingsDelegate(settingsPanelBuilder)
+
+    val example1Setting: String by settingsManager.stringSetting("An example string setting here", "test default value here")
+    val example2Setting: Boolean by settingsManager.booleanSetting("An example boolean setting here", false)
+
+    val settingsPanel = settingsManager.buildSettingsPanel()
 }
