@@ -44,6 +44,7 @@ class YourBurpKotlinExtensionName : BurpExtension {
         api.logging().logToOutput("Hello Extension Writer!")
 
         // Code for setting up your extension ends here
+        api.userInterface().registerSettingsPanel(projectSettings.settingsPanel)
 
         // See logging comment above
         api.logging().logToOutput("...Finished loading the extension")

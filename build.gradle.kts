@@ -33,7 +33,7 @@ dependencies {
     // Include the Montoya API from Maven Central:
     // https://central.sonatype.com/artifact/net.portswigger.burp.extensions/montoya-api
     // Check for latest version: https://central.sonatype.com/artifact/net.portswigger.burp.extensions/montoya-api/versions
-    implementation("net.portswigger.burp.extensions:montoya-api:2025.6")
+    implementation("net.portswigger.burp.extensions:montoya-api:2025.7")
 
     // Enable these if you want to use https://github.com/ncoblentz/BurpMontoyaLibrary
     implementation("com.github.ncoblentz:BurpMontoyaLibrary:0.2.0")
@@ -44,5 +44,5 @@ tasks.test {
 }
 
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(24)
 }
