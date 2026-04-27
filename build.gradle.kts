@@ -1,11 +1,11 @@
 plugins {
     // Provides Kotlin Language Support
     // https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm
-    kotlin("jvm") version "2.3.0"
+    kotlin("jvm") version "2.3.21"
 
     // Provides the shadowJar task in Gradle
-    // https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow
-    id("com.github.johnrengelman.shadow") version "8.1.1"
+    // https://plugins.gradle.org/plugin/com.gradleup.shadow
+    id("com.gradleup.shadow") version "9.4.1"
 
 }
 
@@ -33,7 +33,7 @@ dependencies {
     // Include the Montoya API from Maven Central:
     // https://central.sonatype.com/artifact/net.portswigger.burp.extensions/montoya-api
     // Check for latest version: https://central.sonatype.com/artifact/net.portswigger.burp.extensions/montoya-api/versions
-    implementation("net.portswigger.burp.extensions:montoya-api:2025.12")
+    implementation("net.portswigger.burp.extensions:montoya-api:2026.4")
 
     // Enable these if you want to use https://github.com/ncoblentz/BurpMontoyaLibrary
     implementation("com.github.ncoblentz:BurpMontoyaLibrary:0.2.0")
